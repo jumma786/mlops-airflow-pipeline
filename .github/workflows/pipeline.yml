@@ -1,0 +1,34 @@
+name: Airflow Pipeline CI/CD
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"
+
+jobs:
+  test:
+    name: Test Pipeline Tasks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies (no Airflow — CI only)
+        run: pip install pandas numpy scikit-learn xgboost scipy pytest pytest-cov pyarrow joblib
+      - name: Run task tests
+        run: pytest tests/ -v --cov=src --cov-report=xml
+      - name: Run standalone pipeline
+        run: python run_pipeline.py
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-artifacts
+          path: artifacts/
+          retention-days: 30

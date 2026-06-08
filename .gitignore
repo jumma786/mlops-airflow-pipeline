@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+coverage.xml
+artifacts/
+data/processed/
+data/*.csv
+airflow_home/
+.env
+*.egg-info/
+.DS_Store
+logs/
