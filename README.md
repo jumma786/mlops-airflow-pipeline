@@ -6,7 +6,7 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-champion-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-> **Part of the MLOps Portfolio Series** — Project 9 of 10  
+> **Part of the [MLOps Portfolio Series](https://github.com/jumma786/mlops-portfolio)** — Project 9 of 10  
 > Orchestrates the full ML training pipeline using Apache Airflow — data ingestion, feature engineering, model training, and validation gating — with XCom state passing between tasks.
 
 ---
