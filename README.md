@@ -104,7 +104,7 @@ make test
 | 7 | Model Monitoring | [mlops-model-monitoring](https://github.com/jumma786/mlops-model-monitoring) | ✅ |
 | 8 | A/B Testing | [mlops-ab-testing](https://github.com/jumma786/mlops-ab-testing) | ✅ |
 | **9** | **Airflow Pipeline** | [mlops-airflow-pipeline](https://github.com/jumma786/mlops-airflow-pipeline) | ✅ This repo |
-| 10 | Kubernetes Platform | mlops-k8s-platform | 🔜 |
+| 10 | Kubernetes Platform | [mlops-k8s-platform](https://github.com/jumma786/mlops-k8s-platform) | ✅ |
 
 ---
 
@@ -117,4 +117,4 @@ make test
 
 ---
 
-*Project 9 of 10 — MLOps Portfolio Series.*
+*Project 9 of 10 — MLOps Portfolio Series complete.*
