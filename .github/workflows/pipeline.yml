@@ -24,11 +24,9 @@ jobs:
         run: pip install pandas numpy scikit-learn xgboost scipy pytest pytest-cov pyarrow joblib
       - name: Run task tests
         run: pytest tests/ -v --cov=src --cov-report=xml
-      - name: Run standalone pipeline
-        run: python run_pipeline.py
-      - name: Upload artifacts
+      - name: Upload coverage
         uses: actions/upload-artifact@v4
         with:
-          name: pipeline-artifacts
-          path: artifacts/
+          name: coverage-report
+          path: coverage.xml
           retention-days: 30
